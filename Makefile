@@ -1,5 +1,5 @@
 run:
-	docker run -d -it --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 postgres
+	docker run -d -it --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-password -p 3306:3306 --network my-network mysql
 
 stop:
-	docker stop postgres && docker rm postgres
+	docker stop mysql && docker rm mysql
